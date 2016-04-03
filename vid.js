@@ -25,7 +25,7 @@ function getVideoFromURL(url, info, direct)
 function getYoutubevid(url)
 {
 	var splited = url.split("/");
-	for (i=0;i < splited.lenght(); i++)
+	for (i=0;i < splited.lenght; i++)
 	{
 		if (splited[i].substring(0, 5).toLowerCase() == "watch")
 		{
