@@ -52,7 +52,7 @@ function GETr(url)
     }
     Http.open("GET", url, true);
     Http.send(null);
-    while 1 == 1
+    while (true)
     {
     	someline = 0;
     }
