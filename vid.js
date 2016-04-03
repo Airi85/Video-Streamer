@@ -40,13 +40,10 @@ function GETr(url)
     Http.onreadystatechange = function() { 
         if (Http.readyState == 4)
         {
+        	var ready = true;
         	if (Http.status == 200)
         	{
-        		return Http.responseText
-        	}
-        	else
-        	{
-        		return -1
+        		var status = true;
         	}
         }
     }
@@ -54,7 +51,11 @@ function GETr(url)
     Http.send(null);
     while (true)
     {
-    	someline = 0;
+    	if (ready)
+    	{
+    		if (status) return Http.responseText;
+    		return -1
+    	}
     }
 }
 
