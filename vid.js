@@ -3,7 +3,7 @@ function getVideoFromURL(url, info, direct)
 	//youtube
 	if (url.toLowerCase.indexOf('youtube.com') && url.toLowerCase.indexOf('watch'))
 	{
-		if (direct) return -1;
+		if (direct) return getYoutubeDirect(getYoutubevid(url)).getSource("video/webm", "medium"); //não funcional, chrome bloqueia conexão com o youtube
 		if (!direct) return createYoutubeHTML(getYoutubevid(url), info[0], info[1], info[2], info[3], info[4], info[5]);
 	}
 	//vimeo
