@@ -36,10 +36,26 @@ function createYoutubeHTML(ytcode, sizex, sizey, showSuggested, showControls, sh
 
 function GETr(url)
 {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", url, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+    var Http = new XMLHttpRequest();
+    Http.onreadystatechange = function() { 
+        if (Http.readyState == 4)
+        {
+        	if (Http.status == 200)
+        	{
+        		return Http.responseText
+        	}
+        	else
+        	{
+        		return -1
+        	}
+        }
+    }
+    Http.open("GET", url, true); // true for asynchronous 
+    Http.send(null);
+    while true
+    {
+    	
+    }
 }
 
 function decodeQueryString(queryString)
