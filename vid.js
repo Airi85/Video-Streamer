@@ -12,7 +12,7 @@ VideoStreamer["Vimeo"] = {};
 function getVideoFromURL(url, info, direct)
 {
 	//youtube
-	if (url.toLowerCase.indexOf('youtube.com') && url.toLowerCase.indexOf('watch'))
+	if (url.toLowerCase().indexOf('youtube.com') && url.toLowerCase().indexOf('watch'))
 	{
 		info = info.Youtube
 		if (direct) return getYoutubeDirect(getYoutubevid(url)).getSource("video/webm", "medium"); //não funcional, chrome bloqueia conexão com o youtube
