@@ -33,3 +33,11 @@ function createYoutubeHTML(ytcode, sizex, sizey, showSuggested, showControls, sh
 	if (!showTitle) ytHTML = ytHTML + (showSuggested && showControl) ? '&amp;' : '' + 'showinfo=0';
 	return ytHTML + '" frameborder="0" allowfullscreen></iframe>';
 }
+
+function GETr(url)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
