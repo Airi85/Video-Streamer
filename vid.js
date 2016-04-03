@@ -50,11 +50,11 @@ function GETr(url)
         	}
         }
     }
-    Http.open("GET", url, true); // true for asynchronous 
+    Http.open("GET", url, true);
     Http.send(null);
-    while true
+    while 1 == 1
     {
-    	
+    	someline = 0;
     }
 }
 
