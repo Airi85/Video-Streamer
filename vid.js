@@ -37,13 +37,15 @@ function createYoutubeHTML(ytcode, sizex, sizey, showSuggested, showControls, sh
 function GETr(url)
 {
     var Http = new XMLHttpRequest();
+    var ready;
+    var status;
     Http.onreadystatechange = function() { 
         if (Http.readyState == 4)
         {
-        	var ready = true;
+        	ready = true;
         	if (Http.status == 200)
         	{
-        		var status = true;
+        		status = true;
         	}
         }
     }
