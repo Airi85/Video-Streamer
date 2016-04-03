@@ -1,12 +1,12 @@
 var VideoStreamer = {};
-var VideoStreamer["Youtube"] = {};
-var VideoStreamer.Youtube["x"] = 640;
-var VideoStreamer.Youtube["y"] = 360;
-var VideoStreamer.Youtube["showSuggested"] = false;
-var VideoStreamer.Youtube["showControls"] = false;
-var VideoStreamer.Youtube["showTitle"] = false;
-var VideoStreamer.Youtube["privacyMode"] = false;
-var VideoStreamer["Vimeo"] = {};
+VideoStreamer["Youtube"] = {};
+VideoStreamer.Youtube["x"] = 640;
+VideoStreamer.Youtube["y"] = 360;
+VideoStreamer.Youtube["showSuggested"] = false;
+VideoStreamer.Youtube["showControls"] = false;
+VideoStreamer.Youtube["showTitle"] = false;
+VideoStreamer.Youtube["privacyMode"] = false;
+VideoStreamer["Vimeo"] = {};
 
 
 function getVideoFromURL(url, info, direct)
