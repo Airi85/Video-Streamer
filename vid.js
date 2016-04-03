@@ -39,10 +39,10 @@ function createYoutubeHTML(ytcode, sizex, sizey, showSuggested, showControls, sh
 	var ytHTML = '<iframe width="' + sizex + '" height="' + sizey;
 	if (!privacyMode) ytHTML = ytHTML + '" src="https://www.youtube.com/embed/' + ytcode;
 	if (privacyMode) ytHTML = ytHTML + '" src="https://www.youtube-nocookie.com/embed/' + ytcode;
-    if (!(showSuggested && showControl && showTitle)) ytHTML = ytHTML + '?';
+    if (!(showSuggested && showControls && showTitle)) ytHTML = ytHTML + '?';
 	if (!showSuggested) ytHTML = ytHTML + 'rel=0';
-	if (!showControl) ytHTML = ytHTML + (showSuggested) ? '&amp;' : '' + 'controls=0';
-	if (!showTitle) ytHTML = ytHTML + (showSuggested && showControl) ? '&amp;' : '' + 'showinfo=0';
+	if (!showControls) ytHTML = ytHTML + (showSuggested) ? '&amp;' : '' + 'controls=0';
+	if (!showTitle) ytHTML = ytHTML + (showSuggested && showControls) ? '&amp;' : '' + 'showinfo=0';
 	return ytHTML + '" frameborder="0" allowfullscreen></iframe>';
 }
 
