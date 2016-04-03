@@ -1,10 +1,22 @@
+var VideoStreamer = {};
+var VideoStreamer["Youtube"] = {};
+var VideoStreamer.Youtube["x"] = 640;
+var VideoStreamer.Youtube["y"] = 360;
+var VideoStreamer.Youtube["showSuggested"] = false;
+var VideoStreamer.Youtube["showControls"] = false;
+var VideoStreamer.Youtube["showTitle"] = false;
+var VideoStreamer.Youtube["privacyMode"] = false;
+var VideoStreamer["Vimeo"] = {};
+
+
 function getVideoFromURL(url, info, direct)
 {
 	//youtube
 	if (url.toLowerCase.indexOf('youtube.com') && url.toLowerCase.indexOf('watch'))
 	{
+		info = info.Youtube
 		if (direct) return getYoutubeDirect(getYoutubevid(url)).getSource("video/webm", "medium"); //não funcional, chrome bloqueia conexão com o youtube
-		if (!direct) return createYoutubeHTML(getYoutubevid(url), info[0], info[1], info[2], info[3], info[4], info[5]);
+		if (!direct) return createYoutubeHTML(getYoutubevid(url), info.x, info.y, info.showSuggested, info.showControls, info.showTitle, info.privacyMode);
 	}
 	//vimeo
 
