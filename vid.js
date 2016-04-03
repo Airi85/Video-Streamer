@@ -41,7 +41,7 @@ function createYoutubeHTML(ytcode, sizex, sizey, showSuggested, showControls, sh
 	if (privacyMode) ytHTML = ytHTML + '" src="https://www.youtube-nocookie.com/embed/' + ytcode;
     if (!(showSuggested && showControls && showTitle)) ytHTML = ytHTML + '?';
 	if (!showSuggested) ytHTML = ytHTML + 'rel=0';
-	if (!showControls) ytHTML = ytHTML + ((showSuggested) ? '&amp;' : '') + 'controls=0';
+	if (!showControls) ytHTML = ytHTML + ((!showSuggested) ? '&amp;' : '') + 'controls=0';
 	if (!showTitle) ytHTML = ytHTML + ((!showSuggested || !showControls) ? '&amp;' : '') + 'showinfo=0';
 	return ytHTML + '" frameborder="0" allowfullscreen></iframe>';
 }
